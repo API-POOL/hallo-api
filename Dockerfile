@@ -27,7 +27,7 @@ RUN python3 -m venv venv && \
 RUN pip install torch==2.2.2+cu121 torchaudio torchvision --index-url https://download.pytorch.org/whl/cu121 && \
     pip install onnxruntime-gpu
 
-EXPOSE 7860
+EXPOSE 8000
 
 RUN chmod +x /app/start.sh
 CMD ["/app/start.sh"]
