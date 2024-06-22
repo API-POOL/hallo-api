@@ -15,19 +15,19 @@ class Body(BaseModel):
     image: str
     audio: str
     
-    pose_weight: float = 1.0
-    face_weight: float = 1.0
-    lip_weight: float = 1.0
-    face_expand_ratio: float = 1.2
-    setting_steps: int = 40
-    setting_cfg: float = 3.5
-    settings_seed: int = 42
-    settings_fps: int = 25
-    settings_motion_pose_scale: float = 1.1
-    settings_motion_face_scale: float = 1.1
-    settings_motion_lip_scale: float = 1.1
-    settings_n_motion_frames: int = 2
-    settings_n_sample_frames: int = 16
+    pose_weight: Optional[float] = 1.0
+    face_weight: Optional[float] = 1.0
+    lip_weight: Optional[float] = 1.0
+    face_expand_ratio: Optional[float] = 1.2
+    setting_steps: Optional[int] = 40
+    setting_cfg: Optional[float] = 3.5
+    settings_seed: Optional[int] = 42
+    settings_fps: Optional[int] = 25
+    settings_motion_pose_scale: Optional[float] = 1.1
+    settings_motion_face_scale: Optional[float] = 1.1
+    settings_motion_lip_scale: Optional[float] = 1.1
+    settings_n_motion_frames: Optional[int] = 2
+    settings_n_sample_frames: Optional[int] = 16
    
 @app.get("/")
 def read_root():
