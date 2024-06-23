@@ -15,6 +15,8 @@ class Body(BaseModel):
     image: str
     audio: str
     
+    source_image: Optional[str] = None
+    driving_audio: Optional[str] = None
     pose_weight: Optional[float] = 1.0
     face_weight: Optional[float] = 1.0
     lip_weight: Optional[float] = 1.0
