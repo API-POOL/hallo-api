@@ -40,7 +40,7 @@ def generate(body: Body):
     b64_to_audio(body.audio, audio_path)
     b64_to_image(body.image, image_path)
     
-    setattr(body, "soruce_image", image_path)
+    setattr(body, "source_image", image_path)
     setattr(body, "driving_audio", audio_path)
     
     setattr(body, "output", video_path)
