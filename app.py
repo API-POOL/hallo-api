@@ -7,9 +7,9 @@ from scripts.inference import inference_process
 from utils import b64_to_audio, b64_to_image, video_to_b64
 
 app = fastapi.FastAPI()
-image_path = "./input-image.jpg"
-audio_path = "./input-audio.wav"
-video_path = "./output-video.mp4"
+image_path = "/app/input-image.jpg"
+audio_path = "/app/input-audio.wav"
+video_path = "/app/output-video.mp4"
      
 class Body(BaseModel):
     image: str
