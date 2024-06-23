@@ -38,12 +38,12 @@ def generate(body: Body):
     b64_to_audio(body.audio, audio_path)
     b64_to_image(body.image, image_path)
     
-    body.soruce_image = image_path
-    body.driving_audio = audio_path
+    setattr(body, "soruce_image", image_path)
+    setattr(body, "driving_audio", audio_path)
     
-    body.output = video_path
-    body.config = "configs/inference/default.yaml"
-    body.checkpoint = None
+    setattr(body, "output", video_path)
+    setattr(body, "config", "configs/inference/default.yaml")
+    setattr(body, "checkpoint", None)
     
     inference_process(
         body,
